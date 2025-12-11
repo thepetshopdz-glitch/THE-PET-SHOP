@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Shop Landing Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #0096ff; /* solid blue like your design */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .top-banner {
+            background: #ffb200; /* orange-yellow top */
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 48px;
+            font-weight: 900;
+            color: white;
+            line-height: 1.1;
+            text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+        }
+
+        .shop {
+            color: white;
+            font-size: 48px;
+        }
+
+        .container {
+            text-align: center;
+            background: #0096ff;
+            padding: 80px 20px;
+            min-height: 60vh;
+        }
+
+        .logo {
+            width: 140px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+
+        .links-vertical {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+            margin-top: 40px;
+        }
+
+        .links-vertical a {
+            text-decoration: none;
+            font-size: 28px;
+            font-weight: 900;
+            color: white;
+            transition: transform 0.25s ease, color 0.25s ease, text-shadow 0.25s ease;
+        }
+
+        .links-vertical a:hover {
+            transform: scale(1.15);
+    
+        }
+
+        .links-vertical a:active {
+            transform: scale(0.9);
+        }
+
+        .links a {
+            text-decoration: none;
+            background: white;
+            color: #1e90ff;
+            font-weight: bold;
+            padding: 12px 20px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .links a:hover {
+            background: #ffd700;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-banner">
+        <h1 class="title">THE PET<br><span class="shop">SHOP</span></h1>
+    </div>
+
+    <div class="container">
+        <div class="links-vertical">
+            <a href="https://www.facebook.com/profile.php?id=61578324093138" id="fb">FACEBOOK</a>
+            <a href="https://www.instagram.com/thepetsh0p.46/" id="insta">INSTAGRAM</a>
+            <a href="#" id="whatsapp">WHATSAPP</a>
+            <a href="#" id="tiktok">TIKTOK</a>
+        </div>
+    </div>
+
+    <script>
+        const links = document.querySelectorAll('.links-vertical a');
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                link.style.transition = 'transform 0.1s ease';
+                link.style.transform = 'scale(0.85)';
+                setTimeout(() => {
+                    link.style.transform = 'scale(1)';
+                }, 120);
+            });
+        });
+    </script>
+</body>
+</html>
